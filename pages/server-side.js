@@ -45,8 +45,8 @@ export default function Home({ countries }) {
 	);
 }
 
-//Static site render (SSR) -> getStaticProps
-export const getStaticProps = async () => {
+//Server side rendering (SSR) -> getServerSideProps
+export const getServerSideProps = async () => {
 	const { data } = await client.query({
 		query: gql`
 			query Countries {
